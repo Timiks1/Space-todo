@@ -1,0 +1,79 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2% 0; /* Вертикальные отступы в процентах */
+  padding: 0;
+}
+
+.page-item {
+  list-style: none;
+  margin: 0 1%; /* Горизонтальные отступы между кнопками в процентах */
+}
+
+.page-link {
+  width: 5%; /* Ширина кнопок в процентах */
+  min-width: 40px; /* Минимальная ширина для удобства на маленьких экранах */
+  height: 40px; /* Высота кнопок */
+  background-color: #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-link:hover {
+  background-color: #bbb;
+}
+
+.page-link.active {
+  background-color: #333;
+  color: #fff;
+}
+
+.page-link.dots {
+  cursor: default;
+  color: #999;
+  background-color: #ddd;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+  .pagination {
+    flex-wrap: wrap;
+    margin: 1% 0; /* Уменьшаем вертикальный отступ на меньших экранах */
+  }
+
+  .page-link {
+    width: 8%; /* Увеличиваем ширину кнопок на меньших экранах */
+    min-width: 35px;
+    height: 35px; /* Уменьшаем высоту кнопок */
+    font-size: 14px; /* Уменьшаем размер шрифта */
+  }
+
+  .page-item {
+    margin: 0 0.5%; /* Уменьшаем горизонтальные отступы между кнопками */
+  }
+}
+
+/* Дополнительные стили для очень маленьких экранов (например, телефоны в портретном режиме) */
+@media (max-width: 480px) {
+  .page-link {
+    width: 10%; /* Еще больше увеличиваем ширину кнопок на самых маленьких экранах */
+    min-width: 30px;
+    height: 30px; /* Еще больше уменьшаем высоту кнопок */
+    font-size: 12px;
+  }
+
+  .pagination {
+    margin: 0.5% 0;
+  }
+
+  .page-item {
+    margin: 0 0.3%; /* Минимальные отступы для компактного отображения */
+  }
+}

@@ -1,0 +1,57 @@
+.add-todo-form,
+.edit-todo-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.add-todo-form input,
+.edit-todo-form input {
+  padding: 8px;
+  font-size: 16px;
+  width: 70%;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.add-todo-form button,
+.edit-todo-form button {
+  background-color: #4caf50;
+  color: #fff;
+  font-size: 16px;
+}
+
+.add-todo-form button:hover,
+.edit-todo-form button:hover {
+  background-color: #45a049;
+}
+
+/* TodoList.css или AddTodo.css */
+
+@media (max-width: 768px) {
+  .add-todo-form input,
+  .edit-todo-form input {
+    width: 60%;
+  }
+
+  .add-todo-form button,
+  .edit-todo-form button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add-todo-form input,
+  .edit-todo-form input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .add-todo-form button,
+  .edit-todo-form button {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

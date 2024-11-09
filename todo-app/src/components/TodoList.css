@@ -1,0 +1,71 @@
+/* TodoList.css */
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between; /* Размещает текст слева и кнопки справа */
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 18px;
+}
+
+/* Группа кнопок */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Сдвигает группу кнопок к правой границе */
+}
+
+/* Стили кнопок */
+.todo-item button {
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: #fff;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+}
+
+.edit-btn:hover,
+.delete-btn:hover {
+  opacity: 0.9;
+}
+/* Ограничивающий контейнер для пагинации */
+.pagination-container {
+  width: 100%;
+  max-width: 600px; /* Ограничиваем максимальную ширину */
+  margin: 0 auto; /* Центрируем внутри основного контейнера */
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-group {
+    margin-top: 10px;
+    margin-left: 0; /* Отключаем смещение для мобильных */
+  }
+
+  .todo-item button {
+    width: auto;
+    margin: 0;
+  }
+}
