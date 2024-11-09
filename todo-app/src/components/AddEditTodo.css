@@ -27,8 +27,6 @@
   background-color: #45a049;
 }
 
-/* TodoList.css или AddTodo.css */
-
 @media (max-width: 768px) {
   .add-todo-form input,
   .edit-todo-form input {
